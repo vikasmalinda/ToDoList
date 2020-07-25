@@ -1,0 +1,86 @@
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/sidebar/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+          <h1 style="color: white;">Categories</h1>
+	        <ul class="list-unstyled components mb-5" id="menu">
+	          <li id="menu-all">
+	            <a href="#" onclick='ShowItem("All")'>All items</a>
+	           </li>
+	          <li id="menu-pending">
+	              <a href="#" onclick='ShowItem("Pending")'>Pending items</a>
+	          </li>
+	          <li id="menu-done">
+              <a href="#" onclick='ShowItem("Done")'>Done items</a>
+	          </li>
+            <li id="menu-delete">
+              <a href="#" onclick='ShowItem("Deleted")'>Deleted items</a>
+	          </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made <i class="icon-heart" aria-hidden="true"></i> by <a href="https://developmentpro.github.io" target="_blank">vikas</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #1d1919;">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">ToDo</span>
+            </button>
+            {{!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button> --}}
+
+            {{!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> --}}
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active top-li" onclick="location.href='/home.hbs'">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item active top-li" onclick="location.href='/index.hbs'">
+                    <a class="nav-link" href="">Todo</a>
+                </li>
+              </ul>
+            {{!-- </div> --}}
+          </div>
+        </nav>
+          <div class="input-div1" id= "hide">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Type here to add..."  aria-label="" aria-describedby="basic-addon2" id="val-id">
+              <div class="input-group-append">
+                <button class="btn btn-outline-warning" type="button" onclick="Add()">Button</button>
+              </div>
+            </div> 
+          </div>
+        <div class="input-div list-div">
+          <ul id="list" class="scrll">
+              <!-- <li id="1">Create a new webpage<span class="cross"><i class="fas fa-trash"></i></span></li>
+              <li id="2" class="checked">Learn HTML<span class="cross"><i class="fas fa-trash"></i></span></li>
+              <li id="3">Learn CSS<span class="cross"><i class="fas fa-trash"></i></span></li>
+              <li id="4">Learn JavaScript<span class="cross"><i class="fas fa-trash"></i></span></li>
+              <li id="5">Learn NodeJs<span class="cross"><i class="fas fa-trash"></i></span></li>
+ -->          </ul>
+            <div class="loader" id="ld"></div>
+        </div>
+
+
+      </div>
+		</div>
+    <script src="/sidebar/js/popper.js"></script>
+    <script src="/sidebar/js/bootstrap.min.js"></script>
+    <script src="/sidebar/js/main.js"></script>
+    <script type="text/javascript" src="/javascripts/todo.js"></script>
